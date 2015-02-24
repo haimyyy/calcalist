@@ -2518,15 +2518,13 @@ body {
     #mImageBox {
         position: relative;
         display: inline-block;
-        top: 8px;
         margin: 0;
         cursor: pointer;
         height: 0px;
-        width: 24px
     }
     #mImageBox img {
         position: relative;
-        bottom: 5px;
+        bottom: -4px;
         right: 37%;
     }
     #custom-tweet-button {
