@@ -2522,6 +2522,7 @@ body {
         margin: 0;
         cursor: pointer;
         height: 0px;
+        width: 24px
     }
     #mImageBox img {
         position: relative;
