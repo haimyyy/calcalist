@@ -2522,8 +2522,8 @@ body {
         height: 0px;
     }
     #mImageBox img {
-        right: 37%;
-        margin: 0px 0px -4px 0px;
+        margin: 0px 5px -3px -5px;
+        position: initial;
     }
     #custom-tweet-button {
         position: relative;
