@@ -2516,14 +2516,20 @@ body {
     }
 
     #mImageBox {
+        position: relative;
         display: inline-block;
+        top: 8px;
         margin: 0;
         cursor: pointer;
-        height: 0px;
     }
     #mImageBox img {
-        margin: 0px 5px 4px -5px;
-        position: initial;
+        position: relative;
+        bottom: 5px;
+        right: 37%;
+    }
+    .fb-share-button{
+        height: auto;
+        width: 100%
     }
     #custom-tweet-button {
         position: relative;
