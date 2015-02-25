@@ -13,9 +13,11 @@ article, section, nav, aside, header, footer, main {
 /*a:hover for explorer and firefox*/
 .inputButton:active, .inputButton:checked {
     background: transparent !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .inputButton:hover, .inputButton:focus {
     background: '';
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @font-face {
@@ -337,7 +339,6 @@ body {
         letter-spacing: 0.5px;
         font-size: 40px;
     }
-
     .questions > p {
         font-family: shual-light;
         font-size: 32px;
