@@ -47,7 +47,7 @@ function avgParty(id, avgMonth, avgWeek) {
 	};
 }
 
-var tempName = [ partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 10),partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(22, "הרשימה הערבית", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 10), partySection(19, "יהדות התורה", "", "//www.youtube.com/embed/ZxPuED8HZIk", 58.9, 3.0, "#1578ba", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 10),partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 10), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 10),  partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 10), partySection(18, 'ש"ס', "", "//www.youtube.com/embed/ZxPuED8HZIk", 53, 2.2, "#000000", 10)];
+var tempName = [partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 10), partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(22, "הרשימה הערבית", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 10), partySection(19, "יהדות התורה", "", "//www.youtube.com/embed/ZxPuED8HZIk", 58.9, 3.0, "#1578ba", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 10), partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 10), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 10), partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 10), partySection(18, 'ש"ס', "", "//www.youtube.com/embed/ZxPuED8HZIk", 53, 2.2, "#000000", 10)];
 
 var partiesAvg = [];
 
@@ -230,14 +230,13 @@ $(document).ready(function() {
 	});
 
 	// $(document).on("click", '.next', function(e) {
-		// $(this).css({
-			// "backgroundImage" : "url('images/next.png')"
-		// });
+	// $(this).css({
+	// "backgroundImage" : "url('images/next.png')"
+	// });
 	// });
 
 	$(function() {
 		$("#comboBox").on("change", function() {
-			console.log($("#comboBox").val());
 			if ($("#comboBox").val() == "committee")
 				$('#committee').click();
 			if ($("#comboBox").val() == "residence")
@@ -309,9 +308,7 @@ function checkform(obj) {
 			return false;
 		answers.push(selection);
 		selection = "";
-		console.log('b', q_num);
 		if (parseInt(q_num, 10) == 9) {//update to num of questions
-			console.log('a', q_num);
 			checkAns();
 		}
 
@@ -507,20 +504,14 @@ function updateButton(num) {
 	});
 	$('#boxCommittee').on('change', function() {
 		$('#residence').click();
-		console.log(haim)
 		// or $(this).val()
 	});
 	$('#boxResidence').on('change', function() {
 		$('#committee').click();
-		// or $(this).val()
-		console.log(haim2)
 	});
 	$('#boxSubmission').on('change', function() {
 		$('#submission').click();
-		console.log(haim4)
-		// or $(this).val()
 	});
-	console.log($("#comboBox").val());
 	if ($("#comboBox").val == "boxSubmission") {
 		$('#submission').click();
 
@@ -852,24 +843,9 @@ function moveToPartyPage() {
 //update page with choosen party
 function daynamicFunc(num) {
 	closeToggle();
-	$.getJSON("js/full.json", function(d) {
-		var dataFull = d.fullAnswers;
-		//$('#fullAns' + index).html(v);
-		$.each(result, function(index, val) {
-			if (val == num) {
-				$.each(dataFull[index], function(x, v) {
-					$('#fullAns' + x).html(v);
-				});
-			}
-			return;
-		});
-	});
 
 	$.each(parties, function(index, value) {
 		if (value.id == num && num != 10) {
-			/*$('#logo').css({
-			 "background-image" : "url('images/logo" + num + ".png')"
-			 });*/
 			$('#logo').attr('src', "images/logo" + num + ".png");
 
 			i = 0;
@@ -940,9 +916,6 @@ function daynamicFunc(num) {
 		if (num == 10) {
 			for ( i = 0; i < tempName.length; i++) {
 				if (tempName[i].id == 10) {
-					// $('#logo').css({
-					// "background-image" : "url('images/logo" + num + ".png')"
-					// });
 					$('#logo').attr('src', "images/logo" + num + ".png");
 					updateToggle(i);
 					$('#percentOf').html(tempName[i].percent + "%");
@@ -1004,6 +977,18 @@ function daynamicFunc(num) {
 			}
 		}
 	});
+	$.getJSON("js/full.json", function(d) {
+		var dataFull = d.fullAnswers;
+		//$('#fullAns' + index).html(v);
+		$.each(result, function(index, val) {
+			if (val == num) {
+				$.each(dataFull[index], function(x, v) {
+					$('#fullAns' + x).html(v);
+				});
+			}
+			return;
+		});
+	});
 	var images = [];
 	for ( j = 1; j < tempName[i].members + 1; j++) {
 		images[j] = 'images/' + num + '/' + num + '.' + j + '.png';
@@ -1022,9 +1007,11 @@ function updateToggle(tog) {
 
 	}
 }
-function updateToggleAnswer(){
-	
+
+function updateToggleAnswer() {
+
 }
+
 function closeToggle() {
 	for ( u = 0; u < 9; u++) {
 		if ($("div.fullAns" + u).css("display") == "block")
@@ -1062,13 +1049,8 @@ function myAnsfunc() {
 })(jQuery);
 $(document).on('click', "#previous , #next", function(e) {
 	e.preventDefault();
-	console.log($('#menu').hasScrollBar());
-	// if($("#menu").scrollLeft() == ($("#menu").width())){
-	// alert('end!');
-	// }
 	if ($('#menu').hasScrollBar()) {
 		var leftPos = $('#menu').scrollLeft();
-		// $(".next").css({"backgroundImage" : "url('images/nextH.png')"});
 		if ($(this).attr('id') == "previous")
 			$('#menu').animate({
 				scrollLeft : leftPos - 200
