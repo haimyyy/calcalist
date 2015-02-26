@@ -5,10 +5,7 @@ var answers = [];
 var chkimAns = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var percent = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var result = [14, 16, 15, 17, 10, 26, 20, 22, 18, 19];
-var i,
-    j,
-    y,
-    p;
+var i, j, y, p;
 var selection = "";
 var numParty = 0;
 var bouncer;
@@ -124,6 +121,9 @@ $(document).ready(function() {
 			"color" : "#FFFFFF"
 		})
 		numParty = numParty.replace(/[^\d.]/g, '');
+		$('#logo').fadeOut(0);
+		$('#logo').attr("src",  "images/logo" + numParty + ".png");
+		$('#logo').fadeIn(500);
 		daynamicFunc(numParty);
 
 		//update page with party results
@@ -458,8 +458,7 @@ function checkAns() {
 		$(".answer8 #button8").click(function() {
 			$("div.fullAns8").slideToggle("fast");
 		});
-		var index = 0,
-		    smaller = 10;
+		var index = 0, smaller = 10;
 		//move first result to start
 		$(".next").click();
 		//choose the first result
@@ -537,73 +536,73 @@ function updateButton(num) {
 		$('#hour').html("*שעות שבועיות");
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-					
-				});
-				$("#14ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#15ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#16ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#17ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#26ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#20ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 18: {
-				$("#18ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#18ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 19: {
-				$("#19ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#19ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+
+					});
+					$("#14ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#15ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#16ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#17ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#26ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#20ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 18: {
+					$("#18ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#18ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 19: {
+					$("#19ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#19ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
 			}
 		}
 	});
@@ -613,72 +612,72 @@ function updateButton(num) {
 
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#14ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#15ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#16ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#17ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#26ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#20ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 18: {
-				$("#18ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#18ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 19: {
-				$("#19ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#19ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#14ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#15ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#16ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#17ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#26ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#20ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 18: {
+					$("#18ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#18ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 19: {
+					$("#19ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#19ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
 			}
 		}
 
@@ -689,73 +688,73 @@ function updateButton(num) {
 
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#14ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#15ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#16ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#17ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#26ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#20ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#22ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 18: {
-				$("#18ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#18ProgressBar").html(parseInt(tempName[i].rulesApprove));
-				break;
-			}
-			case 19: {
-				$("#19ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				console.log((" אלהן שלום" +parseInt(tempName[i].rulesApprove) * 20) )
-				$("#19ProgressBar").html(parseInt(tempName[i].rulesApprove));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#14ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#15ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#16ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#17ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#26ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#20ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#22ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 18: {
+					$("#18ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#18ProgressBar").html(parseInt(tempName[i].rulesApprove));
+					break;
+				}
+				case 19: {
+					$("#19ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					console.log((" אלהן שלום" + parseInt(tempName[i].rulesApprove) * 20))
+					$("#19ProgressBar").html(parseInt(tempName[i].rulesApprove));
+					break;
+				}
 			}
 		}
 	});
@@ -765,72 +764,72 @@ function updateButton(num) {
 
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission ) * 2) + "px"
-				});
-				$("#14ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#15ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#16ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#17ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#26ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : (190) + "px"
-				});
-				$("#20ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : 230 + "px"
-				});
-				$("#22ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 18: {
-				$("#18ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) *2) + "px"
-				});
-				$("#18ProgressBar").html(parseInt(tempName[i].rulesSubmission));
-				break;
-			}
-			case 19: {
-				$("#19ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#19ProgressBar").html(parseInt(tempName[i].rulesSubmission));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#14ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#15ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#16ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#17ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#26ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : (190) + "px"
+					});
+					$("#20ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : 230 + "px"
+					});
+					$("#22ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 18: {
+					$("#18ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#18ProgressBar").html(parseInt(tempName[i].rulesSubmission));
+					break;
+				}
+				case 19: {
+					$("#19ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#19ProgressBar").html(parseInt(tempName[i].rulesSubmission));
+					break;
+				}
 			}
 		}
 	});
@@ -848,7 +847,6 @@ function daynamicFunc(num) {
 
 	$.each(parties, function(index, value) {
 		if (value.id == num && num != 10) {
-			$('#logo').attr('src', "images/logo" + num + ".png");
 
 			i = 0;
 			$.each(result, function(i, v) {
@@ -918,7 +916,6 @@ function daynamicFunc(num) {
 		if (num == 10) {
 			for ( i = 0; i < tempName.length; i++) {
 				if (tempName[i].id == 10) {
-					$('#logo').attr('src', "images/logo" + num + ".png");
 					updateToggle(i);
 					$('#percentOf').html(tempName[i].percent + "%");
 					$('section.partyNameTrue').each(function() {
