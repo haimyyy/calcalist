@@ -121,7 +121,8 @@ $(document).ready(function() {
 			"color" : "#FFFFFF"
 		})
 		numParty = numParty.replace(/[^\d.]/g, '');
-		$('#logo').fadeOut(0);
+		$('#logo').css("display","none");
+		debugger;
 		$('#logo').attr("src",  "images/logo" + numParty + ".png");
 		
 		daynamicFunc(numParty);
