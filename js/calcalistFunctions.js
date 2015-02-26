@@ -123,7 +123,7 @@ $(document).ready(function() {
 		numParty = numParty.replace(/[^\d.]/g, '');
 		$('#logo').fadeOut(0);
 		$('#logo').attr("src",  "images/logo" + numParty + ".png");
-		$('#logo').fadeIn(500);
+		
 		daynamicFunc(numParty);
 
 		//update page with party results
@@ -844,7 +844,7 @@ function moveToPartyPage() {
 //update page with choosen party
 function daynamicFunc(num) {
 	closeToggle();
-
+	$('#logo').fadeIn(500);
 	$.each(parties, function(index, value) {
 		if (value.id == num && num != 10) {
 
