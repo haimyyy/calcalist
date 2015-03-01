@@ -79,8 +79,35 @@ function calcResidence() {
 	});
 };
 
-$(document).ready(function() {
+var preloadPictures = function(pictureUrls, callback) {
+    var i,
+        j,
+        loaded = 0;
 
+    for (i = 0, j = pictureUrls.length; i < j; i++) {
+        (function (img, src) {
+            img.onload = function () {                               
+                if (++loaded == pictureUrls.length && callback) {
+                    callback();
+                }
+            };
+
+            // Use the following callback methods to debug
+            // in case of an unexpected behavior.
+            img.onerror = function () {};
+            img.onabort = function () {};
+
+            img.src = src;
+            console.log(img.src);
+        } (new Image(), pictureUrls[i]));
+    }
+};
+
+preloadPictures(['images/logo10.png', 'images/logo14.png', 'images/logo15.png', 'images/logo16.png', 'images/logo17.png', 'images/logo18.png', 'images/logo19.png', 'images/logo20.png', 'images/logo22.png', 'images/logo26.png'], function(){
+    console.log('a');
+});
+
+$(document).ready(function() {
 	//liquid party menu results
 	$(document).on('click', "#menu li a", function() {
 
@@ -121,12 +148,7 @@ $(document).ready(function() {
 			"color" : "#FFFFFF"
 		})
 		numParty = numParty.replace(/[^\d.]/g, '');
-		$('#logo').css("display","none");
-		debugger;
-		$('#logo').attr("src",  "images/logo" + numParty + ".png");
-		
 		daynamicFunc(numParty);
-
 		//update page with party results
 		updateButton(numParty);
 		//update progress bar with party results
@@ -845,7 +867,7 @@ function moveToPartyPage() {
 //update page with choosen party
 function daynamicFunc(num) {
 	closeToggle();
-	$('#logo').fadeIn(500);
+	$('#logo').attr("src",  "images/logo" + numParty + ".png");
 	$.each(parties, function(index, value) {
 		if (value.id == num && num != 10) {
 
