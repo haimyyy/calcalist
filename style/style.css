@@ -592,6 +592,7 @@ body {
         height: 50px;
         font-family: 'Alef';
         font-weight: 600;
+        line-height: 16px;
     }
     #deynmicActive {
         float: right;
@@ -873,8 +874,9 @@ body {
         margin-left: 2%;
         float: right;
         font-family: 'Alef';
-        font-size: 16px;
+        font-size: 15px;
         margin-top: 7px;
+        font-weight: bold;
     }
 
     .summerAns {
